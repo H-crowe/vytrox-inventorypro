@@ -166,7 +166,7 @@ MySQL Database
 ## Project Structure
 
 ```text
-inventory-sales-system/
+vytrox-inventorypro/
   backend/
     src/
       db.js          # MySQL connection pool
