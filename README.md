@@ -37,10 +37,11 @@ Vytrox InventoryPro helps small teams manage products, stock, purchases, sales i
 
 ## Quick Start
 
-From the project root:
+Clone the repository and enter the project folder:
 
 ```bash
-cd "c:\Users\ultimate\Desktop\Vytrox Ship"
+git clone https://github.com/H-crowe/vytrox-inventorypro.git
+cd vytrox-inventorypro
 ```
 
 Install dependencies:
@@ -113,13 +114,9 @@ If VS Code shows `mssql` syntax errors in `schema.sql`, change the file language
 
 ## Local MySQL Startup
 
-If MySQL is not running, start the local MySQL server used by this project:
+If MySQL is not running, start your local MySQL server first. On Windows, this is usually done from the MySQL service, MySQL Notifier, or Services app.
 
-```powershell
-Start-Process -FilePath "C:\Program Files\MySQL\MySQL Server 8.4\bin\mysqld.exe" -ArgumentList '--basedir="C:\Program Files\MySQL\MySQL Server 8.4" --datadir="c:\Users\ultimate\Desktop\Vytrox Ship\backend\database\mysql-data" --port=3306 --bind-address=127.0.0.1' -WindowStyle Hidden
-```
-
-Then run:
+Then run the project:
 
 ```bash
 npm run dev
@@ -130,7 +127,7 @@ npm run dev
 After the database has already been created and seeded, the usual startup is:
 
 ```bash
-cd "c:\Users\ultimate\Desktop\Vytrox Ship"
+cd vytrox-inventorypro
 npm run dev
 ```
 
