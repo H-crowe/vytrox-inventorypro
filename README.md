@@ -214,3 +214,9 @@ backend/database/mysql-data/
 ```
 
 Only the schema and seed scripts are committed, so anyone can recreate the database locally.
+
+## License
+
+This project is licensed under the MIT License.
+
+Copyright (c) 2026 Vytrox.
