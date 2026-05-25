@@ -27,6 +27,32 @@ Vytrox InventoryPro helps small teams manage products, stock, purchases, sales i
 - Inventory movement audit log
 - MySQL transactions for stock-sensitive operations
 
+## Screenshots
+
+Add project screenshots to:
+
+```text
+docs/screenshots/
+```
+
+Recommended files:
+
+```text
+docs/screenshots/overview.png
+docs/screenshots/products.png
+docs/screenshots/invoice.png
+docs/screenshots/reports.png
+```
+
+After adding the images, uncomment or add the image links below:
+
+```md
+![Overview dashboard](docs/screenshots/overview.png)
+![Products page](docs/screenshots/products.png)
+![Invoice modal](docs/screenshots/invoice.png)
+![Reports page](docs/screenshots/reports.png)
+```
+
 ## Demo Accounts
 
 | Role | Username | Password |
