@@ -29,29 +29,21 @@ Vytrox InventoryPro helps small teams manage products, stock, purchases, sales i
 
 ## Screenshots
 
-Add project screenshots to:
+### Overview
 
-```text
-docs/screenshots/
-```
+![Overview dashboard](docs/screenshots/overview.jpg)
 
-Recommended files:
+### Products
 
-```text
-docs/screenshots/overview.png
-docs/screenshots/products.png
-docs/screenshots/invoice.png
-docs/screenshots/reports.png
-```
+![Products page](docs/screenshots/products.jpg)
 
-After adding the images, uncomment or add the image links below:
+### Invoice
 
-```md
-![Overview dashboard](docs/screenshots/overview.png)
-![Products page](docs/screenshots/products.png)
-![Invoice modal](docs/screenshots/invoice.png)
-![Reports page](docs/screenshots/reports.png)
-```
+![Invoice modal](docs/screenshots/invoice.jpg)
+
+### Reports
+
+![Reports page](docs/screenshots/reports.jpg)
 
 ## Demo Accounts
 
