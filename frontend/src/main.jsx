@@ -123,7 +123,7 @@ function App() {
         <Topbar page={page} user={user} onLogout={logout} />
         {toast && <Toast toast={toast} onClose={() => setToast(null)} />}
         {invoice && <InvoiceModal invoice={invoice} onClose={() => setInvoice(null)} />}
-        {modal && <AppModal modal={modal} setModal={setModal} data={data} submit={submit} actions={actions} />}
+        {modal && <AppModal modal={modal} setModal={setModal} data={data} submit={submit} actions={actions} notify={showToast} />}
         {page === 'Overview' && <Overview dashboard={data.dashboard} setPage={setPage} />}
         {page === 'Products' && <Products data={data} search={search} setSearch={setSearch} canInventory={canInventory} setModal={setModal} actions={actions} />}
         {page === 'Sales' && <Sales data={data} canSell={canSell} setModal={setModal} actions={actions} />}
@@ -269,7 +269,7 @@ function Users({ users, setModal }) {
   );
 }
 
-function AppModal({ modal, setModal, data, submit, actions }) {
+function AppModal({ modal, setModal, data, submit, actions, notify }) {
   const title = modalTitle(modal);
   return (
     <div className="modal-backdrop">
@@ -280,7 +280,7 @@ function AppModal({ modal, setModal, data, submit, actions }) {
         {modal.type === 'purchase' && <PurchaseForm data={data} onSubmit={(e) => submit(e, actions.purchase, 'Purchase created and stock increased.')} />}
         {['customer', 'supplier', 'category'].includes(modal.type) && <SimpleForm type={modal.type} onSubmit={(e) => submit(e, actions[modal.type])} />}
         {modal.type === 'user' && <UserForm onSubmit={(e) => submit(e, actions.user, 'User created.')} />}
-        {modal.type === 'reset' && <ResetForm user={modal.user} onSubmit={async (e) => { e.preventDefault(); try { await actions.resetPassword(modal.user.id, new FormData(e.currentTarget).get('password')); setModal(null); } catch (err) { alert(err.message); } }} />}
+        {modal.type === 'reset' && <ResetForm user={modal.user} onSubmit={async (e) => { e.preventDefault(); try { await actions.resetPassword(modal.user.id, new FormData(e.currentTarget).get('password')); setModal(null); notify('Password reset successfully.'); } catch (err) { notify(err.message, 'error'); } }} />}
       </article>
     </div>
   );
